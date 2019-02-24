@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+    <script type="text/javascript" src="http://iclient.supermap.io/dist/leaflet/iclient9-leaflet.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <style type="text/css">
+    	#map{
+		  border: 1px solid red;
+    	}
+    </style>
+</head>
+<body>
+    
+    <div id="map" style="width:1200px;height:500px;"> 	
+
+    </div>
+    <button id="add">新增</button>
+    <button id="query">查询</button>
+    <script type="text/javascript" src='../lib/MapHelper.js'></script>
+    <script type="text/javascript">
+         let url="http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
+    	let url1="http://support.supermap.com.cn:8090/iserver/services/data-world/rest/data";
+
+    	let m=new MapHelper(url,url1);
+    	document.getElementById('add').onclick=function (argument) {
+    		/* body... */
+    		m.editFeature();
+    	}
+    	document.getElementById('query').onclick=function (argument) {
+    		/* body... */
+    		m.editFeature();
+    	}
+    </script>
+
+</body>
+</html>
